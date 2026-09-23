@@ -7,7 +7,7 @@
 | Angel | Actividad 1 - TypeScript y estructura modular | Desarrollo de modelos, tipos, funciones utilitarias y organización de la estructura |
 | [Integrante 2] | Actividad 2 - Angular | [Completar] |
 | [Integrante 3] | Actividad 3 - Formularios y Router | [Completar] |
-| [Integrante 4] | Actividad 4 - API REST | [Completar] |
+| Claudio | Actividad 4 - API REST | [Completar] |
 
 > Completar los nombres completos y la participación de cada integrante antes de la entrega.
 
