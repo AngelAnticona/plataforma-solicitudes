@@ -1,24 +1,9 @@
 <h1>Plataforma de Gestión de Solicitudes Académicas</h1>
 
-<h2>Solicitudes registradas</h2>
+<app-solicitudes-list></app-solicitudes-list>
 
-<ul>
-  <li *ngFor="let solicitud of solicitudes">
-    <strong>{{ solicitud.titulo }}</strong>
-    <br>
-    Tipo: {{ solicitud.tipo }}
-    <br>
-    Estado: {{ solicitud.estado }}
-    <br>
-    Fecha: {{ solicitud.fechaCreacion }}
-  </li>
-</ul>
-
-<h2>Solicitudes pendientes</h2>
-
-<ul>
-  <li *ngFor="let solicitud of solicitudesPendientes">
-    {{ solicitud.titulo }} - {{ solicitud.estado }}
-  </li>
-</ul>
+<hr>
+<h2>Módulo API - Integrante 4</h2>
 <app-usuario-api></app-usuario-api>
+
+<router-outlet></router-outlet>

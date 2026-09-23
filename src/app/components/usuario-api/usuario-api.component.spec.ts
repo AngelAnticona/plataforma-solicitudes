@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { UsuariosApiComponent } from './usuario-api.component';
 
-import { UsuarioApiComponent } from './usuario-api.component';
-
-describe('UsuarioApiComponent', () => {
-  let component: UsuarioApiComponent;
-  let fixture: ComponentFixture<UsuarioApiComponent>;
+describe('UsuariosApiComponent', () => {
+  let component: UsuariosApiComponent;
+  let fixture: ComponentFixture<UsuariosApiComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UsuarioApiComponent]
+      imports: [HttpClientTestingModule],
+      declarations: [UsuariosApiComponent]
     });
-    fixture = TestBed.createComponent(UsuarioApiComponent);
+    fixture = TestBed.createComponent(UsuariosApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
