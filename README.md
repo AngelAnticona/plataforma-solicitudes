@@ -1,5 +1,9 @@
 # Plataforma de Gestión de Solicitudes Académicas
 
+
+---
+
+## LINK EXPOSICIÓN: https://youtu.be/swTMiqJIbEE
 ---
 
 ## 1. Integrantes y responsabilidades
