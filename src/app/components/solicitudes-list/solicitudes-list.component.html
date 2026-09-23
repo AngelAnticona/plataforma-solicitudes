@@ -5,9 +5,9 @@
     <li *ngFor="let solicitud of solicitudes" [ngClass]="{'estado-pendiente': solicitud.estado === 'Pendiente'}">
       <strong>{{ solicitud.titulo }}</strong> <span class="badge">{{ solicitud.estado }}</span>
       <br>
-      Tipo: {{ solicitud.tipo }}
+      <small><strong>Alumno:</strong> {{ getNombreEstudiante(solicitud.estudianteId) }}</small>
       <br>
-      Fecha: {{ solicitud.fechaCreacion }}
+      Tipo: {{ solicitud.tipo }} | Fecha: {{ solicitud.fechaCreacion }}
     </li>
   </ul>
   
@@ -23,7 +23,7 @@
     <h2>Solicitudes pendientes</h2>
     <ul *ngIf="solicitudesPendientes.length > 0; else noPendientes">
       <li *ngFor="let solicitud of solicitudesPendientes">
-        {{ solicitud.titulo }} - {{ solicitud.estado }}
+        {{ solicitud.titulo }} - <strong>{{ getNombreEstudiante(solicitud.estudianteId) }}</strong> ({{ solicitud.estado }})
       </li>
     </ul>
     <ng-template #noPendientes>
