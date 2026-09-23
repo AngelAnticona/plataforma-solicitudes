@@ -1,0 +1,33 @@
+<div class="solicitudes-container">
+  <h2>Solicitudes registradas</h2>
+  
+  <ul *ngIf="solicitudes.length > 0; else noSolicitudes">
+    <li *ngFor="let solicitud of solicitudes" [ngClass]="{'estado-pendiente': solicitud.estado === 'Pendiente'}">
+      <strong>{{ solicitud.titulo }}</strong> <span class="badge">{{ solicitud.estado }}</span>
+      <br>
+      <small><strong>Alumno:</strong> {{ getNombreEstudiante(solicitud.estudianteId) }}</small>
+      <br>
+      Tipo: {{ solicitud.tipo }} | Fecha: {{ solicitud.fechaCreacion }}
+    </li>
+  </ul>
+  
+  <ng-template #noSolicitudes>
+    <p>No hay solicitudes registradas.</p>
+  </ng-template>
+
+  <button (click)="togglePendientes()">
+    {{ mostrarPendientes ? 'Ocultar' : 'Mostrar' }} Solicitudes Pendientes
+  </button>
+
+  <div *ngIf="mostrarPendientes" class="pendientes-section">
+    <h2>Solicitudes pendientes</h2>
+    <ul *ngIf="solicitudesPendientes.length > 0; else noPendientes">
+      <li *ngFor="let solicitud of solicitudesPendientes">
+        {{ solicitud.titulo }} - <strong>{{ getNombreEstudiante(solicitud.estudianteId) }}</strong> ({{ solicitud.estado }})
+      </li>
+    </ul>
+    <ng-template #noPendientes>
+      <p>No hay solicitudes pendientes actualmente.</p>
+    </ng-template>
+  </div>
+</div>

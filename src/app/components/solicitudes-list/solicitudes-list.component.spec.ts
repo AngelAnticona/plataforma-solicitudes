@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { UsuariosApiComponent } from './usuario-api.component';
 
-describe('UsuariosApiComponent', () => {
-  let component: UsuariosApiComponent;
-  let fixture: ComponentFixture<UsuariosApiComponent>;
+import { SolicitudesListComponent } from './solicitudes-list.component';
+
+describe('SolicitudesListComponent', () => {
+  let component: SolicitudesListComponent;
+  let fixture: ComponentFixture<SolicitudesListComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      declarations: [UsuariosApiComponent]
+      declarations: [SolicitudesListComponent]
     });
-    fixture = TestBed.createComponent(UsuariosApiComponent);
+    fixture = TestBed.createComponent(SolicitudesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

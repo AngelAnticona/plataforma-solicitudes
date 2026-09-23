@@ -1,24 +1,13 @@
-<h1>Plataforma de Gestión de Solicitudes Académicas</h1>
+<header class="app-header">
+  <h1>Plataforma de Gestión de Solicitudes Académicas</h1>
+  <nav class="main-nav">
+    <a routerLink="/solicitudes" routerLinkActive="active">Listado de Solicitudes</a>
+    <a routerLink="/nueva-solicitud" routerLinkActive="active">Nueva Solicitud</a>
+    <a routerLink="/usuarios" routerLinkActive="active">Módulo API (Usuarios)</a>
+  </nav>
+</header>
 
-<h2>Solicitudes registradas</h2>
-
-<ul>
-  <li *ngFor="let solicitud of solicitudes">
-    <strong>{{ solicitud.titulo }}</strong>
-    <br>
-    Tipo: {{ solicitud.tipo }}
-    <br>
-    Estado: {{ solicitud.estado }}
-    <br>
-    Fecha: {{ solicitud.fechaCreacion }}
-  </li>
-</ul>
-
-<h2>Solicitudes pendientes</h2>
-
-<ul>
-  <li *ngFor="let solicitud of solicitudesPendientes">
-    {{ solicitud.titulo }} - {{ solicitud.estado }}
-  </li>
-</ul>
-<app-usuario-api></app-usuario-api>
+<main class="app-content">
+  <!-- Aquí se renderizarán los componentes según la ruta activa -->
+  <router-outlet></router-outlet>
+</main>
