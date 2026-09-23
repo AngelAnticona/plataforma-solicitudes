@@ -96,10 +96,3 @@ Todas las evidencias se encuentran dentro del folder **`evidencias`** del proyec
 - **Isaac Arturo Claudio Saldaña:** *"Trabajar con `HttpClient` para consumir una API externa y mapear los datos a nuestro modelo me mostró cómo Angular abstrae las peticiones HTTP y cómo manejar flujos asíncronos con RxJS. La creación del video también reforzó la importancia de documentar y presentar nuestro trabajo de forma clara y profesional."*
 
 ---
-
-## 8. Licencia
-Este proyecto está bajo la licencia **MIT**.
-
----
-
-*Este README se actualizó para cumplir con la documentación del PDF del trabajo y refleja fielmente la aportación y aprendizaje de cada integrante.*
