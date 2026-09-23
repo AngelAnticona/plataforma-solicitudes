@@ -1,0 +1,55 @@
+<div class="form-container">
+  <h2>Nueva Solicitud</h2>
+
+  <form [formGroup]="solicitudForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="titulo">Título de la Solicitud</label>
+      <input type="text" id="titulo" formControlName="titulo" class="form-control"
+             [ngClass]="{ 'is-invalid': enviado && f['titulo'].errors }">
+      <div *ngIf="enviado && f['titulo'].errors" class="invalid-feedback">
+        <div *ngIf="f['titulo'].errors['required']">El título es obligatorio.</div>
+        <div *ngIf="f['titulo'].errors['minlength']">El título debe tener al menos 5 caracteres.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control" rows="3"
+                [ngClass]="{ 'is-invalid': enviado && f['descripcion'].errors }"></textarea>
+      <div *ngIf="enviado && f['descripcion'].errors" class="invalid-feedback">
+        <div *ngIf="f['descripcion'].errors['required']">La descripción es obligatoria.</div>
+        <div *ngIf="f['descripcion'].errors['maxlength']">La descripción no puede exceder 200 caracteres.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo de Solicitud</label>
+      <select id="tipo" formControlName="tipo" class="form-control"
+              [ngClass]="{ 'is-invalid': enviado && f['tipo'].errors }">
+        <option value="">Seleccione un tipo...</option>
+        <option value="Certificado">Certificado</option>
+        <option value="Consulta">Consulta</option>
+        <option value="Reclamo">Reclamo</option>
+      </select>
+      <div *ngIf="enviado && f['tipo'].errors" class="invalid-feedback">
+        <div *ngIf="f['tipo'].errors['required']">El tipo es obligatorio.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="estudianteId">ID del Estudiante</label>
+      <input type="number" id="estudianteId" formControlName="estudianteId" class="form-control"
+             [ngClass]="{ 'is-invalid': enviado && f['estudianteId'].errors }">
+      <div *ngIf="enviado && f['estudianteId'].errors" class="invalid-feedback">
+        <div *ngIf="f['estudianteId'].errors['required']">El ID de estudiante es obligatorio.</div>
+        <div *ngIf="f['estudianteId'].errors['min']">El ID de estudiante debe ser mayor a 0.</div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Registrar Solicitud</button>
+      <button type="button" class="btn btn-secondary" routerLink="/solicitudes">Cancelar</button>
+    </div>
+  </form>
+</div>

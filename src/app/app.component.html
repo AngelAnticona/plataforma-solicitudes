@@ -1,9 +1,13 @@
-<h1>Plataforma de Gestión de Solicitudes Académicas</h1>
+<header class="app-header">
+  <h1>Plataforma de Gestión de Solicitudes Académicas</h1>
+  <nav class="main-nav">
+    <a routerLink="/solicitudes" routerLinkActive="active">Listado de Solicitudes</a>
+    <a routerLink="/nueva-solicitud" routerLinkActive="active">Nueva Solicitud</a>
+    <a routerLink="/usuarios" routerLinkActive="active">Módulo API (Usuarios)</a>
+  </nav>
+</header>
 
-<app-solicitudes-list></app-solicitudes-list>
-
-<hr>
-<h2>Módulo API - Integrante 4</h2>
-<app-usuario-api></app-usuario-api>
-
-<router-outlet></router-outlet>
+<main class="app-content">
+  <!-- Aquí se renderizarán los componentes según la ruta activa -->
+  <router-outlet></router-outlet>
+</main>

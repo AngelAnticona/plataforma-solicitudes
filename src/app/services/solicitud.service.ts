@@ -18,4 +18,14 @@ export class SolicitudService {
   getPendientes(): Solicitud[] {
     return obtenerSolicitudesPendientes(this.solicitudes);
   }
+
+  agregarSolicitud(solicitud: Solicitud): void {
+    // Asignamos un id secuencial básico
+    solicitud.id = this.solicitudes.length > 0 
+      ? Math.max(...this.solicitudes.map(s => s.id)) + 1 
+      : 1;
+    solicitud.fechaCreacion = new Date().toISOString().split('T')[0];
+    solicitud.estado = 'Pendiente';
+    this.solicitudes.push(solicitud);
+  }
 }
