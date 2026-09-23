@@ -1,0 +1,25 @@
+<h2>Usuarios desde API REST</h2>
+<p *ngIf="cargando">Cargando datos...</p>
+
+<p *ngIf="error">
+  {{ error }}
+</p>
+<table border="1" *ngIf="!cargando && !error">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.name }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.phone }}</td>
+    </tr>
+  </tbody>
+</table>
